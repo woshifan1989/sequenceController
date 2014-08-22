@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+<button id="actBtn">btn</button>
+
+<script type="text/javascript" src="wheel.js"></script>
+<script type="text/javascript">
+
+var obj = document.getElementById("actBtn");
+obj.onclick = function () {
+
+    wheel([
+        {
+            timer: 0, 
+            callback: function () {
+                alert(1);
+            }
+        },
+        {
+            timer: 1000, 
+            callback: function () {
+                alert(2);
+            }
+        },
+        {
+            timer: 1000, 
+            callback: function () {
+                alert(3);
+            }
+        }
+    ]);
+
+};
+</script>
+</body>
+</html>
